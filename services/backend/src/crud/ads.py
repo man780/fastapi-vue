@@ -13,7 +13,7 @@ async def get_ads():
     argument -- description
     Return: return_description
     """
-    return await AdOutSchema.from_queryset(Ads.all())
+    return await AdOutSchema.from_queryset(Ads.all().limit(10))
 
 
 async def get_ad(ad_id) -> AdOutSchema:

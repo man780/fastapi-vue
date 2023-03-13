@@ -7,6 +7,9 @@ import DashboardView from '@/views/DashboardView.vue';
 import ProfileView from '@/views/ProfileView.vue';
 import NoteView from '@/views/NoteView.vue';
 import EditNoteView from '@/views/EditNoteView.vue';
+import AdsView from '@/views/ads/ListView.vue';
+import DetailAdView from '@/views/ads/DetailView.vue';
+import EditAdView from '@/views/ads/EditView.vue';
 import store from '@/store'; // NEW
 
 
@@ -31,6 +34,26 @@ const routes = [
     name: 'Dashboard',
     component: DashboardView,
     meta: { requiresAuth: true },
+  },
+  {
+    path: '/ads',
+    name: 'Ads',
+    component: AdsView,
+    meta: { requiresAuth: true },
+  },
+  {
+    path: '/ad/:id',
+    name: 'Ad',
+    component: DetailAdView,
+    meta: { requiresAuth: true },
+    props: true,
+  },
+  {
+    path: '/editad/:id',
+    name: 'EditAd',
+    component: EditAdView,
+    meta: { requiresAuth: true },
+    props: true,
   },
   {
     path: '/profile',
