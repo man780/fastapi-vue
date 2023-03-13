@@ -33,7 +33,8 @@ async def upgrade(db: BaseDBAsyncClient) -> str:
 	vrm varchar NULL,
 	active bool NULL,
 	created timestamp NULL,
-	CONSTRAINT car_pkey PRIMARY KEY (id)
+    "author_id" INT NOT NULL REFERENCES "users" ("id") ON DELETE CASCADE,
+	CONSTRAINT ad_pkey PRIMARY KEY (id)
 );
 CREATE TABLE ad_pictures (
 	id serial4 NOT NULL,
