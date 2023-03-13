@@ -18,4 +18,4 @@ Apply the migrations:
 $ docker-compose exec backend aerich upgrade
 ```
 
-Ensure [http://localhost:5000](http://localhost:5000), [http://localhost:5000/docs](http://localhost:5000/docs), and [http://localhost:8080](http://localhost:8080) work as expected.
+Ensure [http://localhost:5050](http://localhost:5050), [http://localhost:5050/docs](http://localhost:5050/docs), and [http://localhost:8080](http://localhost:8080) work as expected.

@@ -9,7 +9,7 @@ import store from './store';
 const app = createApp(App);
 
 axios.defaults.withCredentials = true;
-axios.defaults.baseURL = 'http://localhost:5000/';  // the FastAPI backend
+axios.defaults.baseURL = 'http://localhost:5050/';  // the FastAPI backend
 
 axios.interceptors.response.use(undefined, function (error) {
   if (error) {

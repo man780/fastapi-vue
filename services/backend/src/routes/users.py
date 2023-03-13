@@ -19,7 +19,7 @@ from src.auth.jwthandler import (
 )
 
 
-router = APIRouter()
+router = APIRouter(tags=["Users"])
 
 
 @router.post("/register", response_model=UserOutSchema)

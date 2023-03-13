@@ -11,7 +11,7 @@ from src.schemas.token import Status
 from src.schemas.users import UserOutSchema
 
 
-router = APIRouter()
+router = APIRouter(tags=["Notes"])
 
 
 @router.get(
