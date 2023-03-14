@@ -10,6 +10,10 @@ import EditNoteView from '@/views/EditNoteView.vue';
 import AdsView from '@/views/ads/ListView.vue';
 import DetailAdView from '@/views/ads/DetailView.vue';
 import EditAdView from '@/views/ads/EditView.vue';
+
+import CarsView from '@/views/cars/ListView.vue';
+import DetailCarView from '@/views/cars/DetailView.vue';
+
 import store from '@/store'; // NEW
 
 
@@ -34,6 +38,19 @@ const routes = [
     name: 'Dashboard',
     component: DashboardView,
     meta: { requiresAuth: true },
+  },
+  {
+    path: '/cars',
+    name: 'Cars',
+    component: CarsView,
+    meta: { requiresAuth: true },
+  },
+  {
+    path: '/car/:id',
+    name: 'Car',
+    component: DetailCarView,
+    meta: { requiresAuth: true },
+    props: true,
   },
   {
     path: '/ads',

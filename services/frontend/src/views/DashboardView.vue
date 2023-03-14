@@ -23,9 +23,9 @@
       <h1>Notes</h1>
       <hr/><br/>
 
-      <div v-if="notes.length">
-        <div v-for="note in notes" :key="note.id" class="notes">
-          <div class="card" style="width: 18rem;">
+      <div v-if="notes.length" class="row">
+        <div v-for="note in notes" :key="note.id" class="col-md-3 notes">
+          <div class="card">
             <div class="card-body">
               <ul>
                 <li><strong>Note Title:</strong> {{ note.title }}</li>
@@ -53,6 +53,7 @@ export default defineComponent({
   name: 'Dashboard',
   data() {
     return {
+      // notes: [],
       form: {
         title: '',
         content: '',

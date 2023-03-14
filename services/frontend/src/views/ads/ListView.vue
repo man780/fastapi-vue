@@ -53,6 +53,7 @@ export default defineComponent({
   name: 'List',
   data() {
     return {
+      ads: [],
       form: {
         title: '',
         content: '',
