@@ -5,7 +5,7 @@
       <h1>Cars</h1>
       <hr/><br/>
 
-      <div v-if="cars.length">
+      <div v-if="cars">
         <table class="table">
           <thead>
             <tr>
@@ -28,7 +28,8 @@
                 </ul>
               </td>
               <td>
-                <router-link :to="{name: 'Car', params:{id: car.id}}">View</router-link>
+                <router-link :to="{name: 'Car', params:{id: car.id}}" class="btn btn-primary">Detail view</router-link>
+                <router-link :to="{name: 'BookCar', params:{id: car.id}}" class="btn btn-success">Book</router-link>
               </td>
             </tr>
           </tbody>
@@ -50,14 +51,12 @@ export default defineComponent({
   name: 'List',
   data() {
     return {
-      // cars: []
     };
   },
   computed: {
     ...mapGetters({ cars: 'stateCars'}),
   },
   methods: {
-    // ...mapActions(['createCar']),
   },
   created: function() {
     return this.$store.dispatch('filterCars');

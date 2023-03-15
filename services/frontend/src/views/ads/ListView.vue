@@ -23,7 +23,7 @@
       <h1>Ads</h1>
       <hr/><br/>
 
-      <div v-if="ads.length">
+      <div v-if="ads">
         <div v-for="ad in ads" :key="ad.id" class="ads">
           <div class="card" style="width: 18rem;">
             <div class="card-body">
@@ -53,7 +53,6 @@ export default defineComponent({
   name: 'List',
   data() {
     return {
-      ads: [],
       form: {
         title: '',
         content: '',

@@ -23,7 +23,7 @@
       <h1>Notes</h1>
       <hr/><br/>
 
-      <div v-if="notes.length" class="row">
+      <div v-if="notes" class="row">
         <div v-for="note in notes" :key="note.id" class="col-md-3 notes">
           <div class="card">
             <div class="card-body">

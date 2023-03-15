@@ -1,6 +1,5 @@
-from typing import Optional, List, TypeVar, Generic
+from typing import List, TypeVar, Generic
 
-from pydantic import BaseModel
 from pydantic.generics import GenericModel
 from tortoise.contrib.pydantic import pydantic_model_creator
 
@@ -34,7 +33,8 @@ CarListSchema = pydantic_model_creator(Cars, name="CarList", include = [
     "engine_size",
     "body_type",
     "fuel_type",
-    "transmission"
+    "transmission",
+    "date"
 ])
 
 

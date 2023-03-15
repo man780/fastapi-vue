@@ -17,8 +17,8 @@ const actions = {
   },
   async filterCars({commit}) {
     let filterCarsPayload = {
-      "page": 1,
-      "limit": 200,
+      "page": 123,
+      "limit": 20,
       "price": 0,
       "year": 0,
       "mileage": 0,

@@ -13,6 +13,7 @@ import EditAdView from '@/views/ads/EditView.vue';
 
 import CarsView from '@/views/cars/ListView.vue';
 import DetailCarView from '@/views/cars/DetailView.vue';
+import BookCarView from '@/views/cars/BookView.vue';
 
 import store from '@/store'; // NEW
 
@@ -49,6 +50,13 @@ const routes = [
     path: '/car/:id',
     name: 'Car',
     component: DetailCarView,
+    meta: { requiresAuth: true },
+    props: true,
+  },
+  {
+    path: '/car/:id',
+    name: 'BookCar',
+    component: BookCarView,
     meta: { requiresAuth: true },
     props: true,
   },
